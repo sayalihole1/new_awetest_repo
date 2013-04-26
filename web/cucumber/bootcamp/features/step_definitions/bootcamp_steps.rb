@@ -24,11 +24,6 @@ Then /^I click the element with "?(.+?)"? "(.+?)"$/ do |how, what|
   @browser.element(how.to_sym, what).click
 end
 
-#And /^I enter "(.*?)" in text field with "?(.+?)"? "(.*?)"$/ do |value, how, what|
-#  what = Regexp.new(Regexp.escape(what)) unless how =~ /index|text/i or what.is_a?(Regexp)
-#  @browser.text_field(how.to_sym, what).set(value)
-#end
-
 Then /^I check that the span with "?(.+?)"? "(.*?)" contains the account name$/ do |how, what|
   what = Regexp.new(Regexp.escape(what)) unless how =~ /index|text/i or what.is_a?(Regexp)
   @browser.span(how.to_sym, what).text == @account_name

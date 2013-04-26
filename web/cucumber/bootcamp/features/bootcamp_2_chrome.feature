@@ -30,7 +30,7 @@ Feature: Bookcamp Example 2 Cucumber and Watir-webdriver
       And I enter the value for "account_billing_zipcode" in text field with id "property(Billing Code)"
       And I enter the value for "account_billing_country" in text field with id "property(Billing Country)"
 
-    Then I click the button with "value" "Save"
+    Then I click the "Save" button
       And sleep for 2 seconds
 
     Then I check that the span with id "value_Account Name" contains the account name
