@@ -54,7 +54,12 @@ Then /^I sign out$/ do
   #@browser.button(:value, 'Sign Out').click
 end
 
-Then /^I go to the URL$/ do
-  @browser.goto(@login['url'])
+Then /^I check that the span with "?(.+?)"? "(.*?)" contains the account name$/ do |how, what|
+  what = Regexp.new(Regexp.escape(what)) unless how =~ /index|text/i or what.is_a?(Regexp)
+  @browser.span(how.to_sym, what).text == @account_name
 end
+
+#Then /^I go to the URL$/ do
+#  @browser.goto(@login['url'])
+#end
 

@@ -7,7 +7,7 @@ Feature: Bookcamp Example 1 Cucumber and Watir-webdriver
 
     Then I enter "joeklienwatir@gmail.com" in login id
       And I enter "watir001" in password
-      And I click the button with "value" "Sign In"
+      And I click the "Sign In" button
       And sleep for 2 seconds
 
     Then I click the link with "title" "CRM Software"
@@ -16,7 +16,7 @@ Feature: Bookcamp Example 1 Cucumber and Watir-webdriver
       And sleep for 2 seconds
 
     Then I create a unique account name
-    Then I click the button with "value" "New Account"
+    Then I click the "New Account" button
       And sleep for 2 seconds
       And I enter the account name in the new account field
       And I click the button with "value" "Save"
@@ -31,7 +31,7 @@ Feature: Bookcamp Example 1 Cucumber and Watir-webdriver
 
     Then I click the link with the account name
       And sleep for 4 seconds
-      And I click the button with "name" "Delete2"
+      And I click the "Delete2" button
       And sleep for 2 seconds
       And I click "OK" in the browser alert
       And sleep for 2 seconds

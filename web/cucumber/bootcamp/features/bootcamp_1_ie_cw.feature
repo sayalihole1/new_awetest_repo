@@ -7,7 +7,7 @@ Feature: Bookcamp Example 1 Cucumber and Classic Watir
 
     Then I enter "joeklienwatir@gmail.com" in login id
       And I enter "watir001" in password
-      And I click the button with "value" "Sign In"
+      And I click the "Sign In" button
       And sleep for 2 seconds
 
     Then I click the link with "title" "CRM Software"
@@ -16,10 +16,10 @@ Feature: Bookcamp Example 1 Cucumber and Classic Watir
       And sleep for 2 seconds
 
     Then I create a unique account name
-    Then I click the button with "value" "New Account"
+    Then I click the "New Account" button
       And sleep for 2 seconds
       And I enter the account name in the new account field
-      And I click the button with "value" "Save"
+      And I click the "Save" button
       And sleep for 2 seconds
 
     Then I check that the span with id "value_Account Name" contains the account name
