@@ -11,9 +11,9 @@ Feature: Bookcamp Example 2 Cucumber and Watir-webdriver
       And I click the "Sign In" button
       And sleep for 2 seconds
 
-    Then I click the link with title "CRM Software"
+    Then I click the link with "title" "CRM Software"
       And sleep for 4 seconds
-    Then I click the link with id "tab_Accounts"
+    Then I click the link with "id" "tab_Accounts"
       And sleep for 2 seconds
 
     Then I create a unique account name
@@ -30,19 +30,19 @@ Feature: Bookcamp Example 2 Cucumber and Watir-webdriver
       And I enter the value for "account_billing_zipcode" in text field with id "property(Billing Code)"
       And I enter the value for "account_billing_country" in text field with id "property(Billing Country)"
 
-    Then I click the button with value "Save"
+    Then I click the button with "value" "Save"
       And sleep for 2 seconds
 
     Then I check that the span with id "value_Account Name" contains the account name
       And sleep for 4 seconds
-    Then I click the link with id "tab_Accounts"
+    Then I click the link with "id" "tab_Accounts"
       And sleep for 2 seconds
       And I should see the account name
       And sleep for 2 seconds
 
     Then I click the link with the account name
       And sleep for 2 seconds
-      And I click the button with name "Delete2"
+      And I click the button with "name" "Delete2"
       And sleep for 2 seconds
       And I click "OK" in the browser alert
       And sleep for 2 seconds

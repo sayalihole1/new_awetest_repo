@@ -11,13 +11,13 @@ Feature: Bookcamp Example 3 Cucumber and Chrome (Watir-webdriver)
       And I click the "Sign In" button
       And sleep for 2 seconds
 
-    Then I click the link with title "CRM Software"
+    Then I click the link with "title" "CRM Software"
       And sleep for 2 seconds
-    Then I click the link with id "tab_Accounts"
+    Then I click the link with "id" "tab_Accounts"
       And sleep for 2 seconds
 
     Then I create a unique account name
-    Then I click the button with value "New Account"
+    Then I click the button with "value" "New Account"
       And sleep for 2 seconds
       And I enter the account name in the new account field
 
@@ -30,7 +30,7 @@ Feature: Bookcamp Example 3 Cucumber and Chrome (Watir-webdriver)
       And I enter the value for "account_billing_zipcode" in text field with id "property(Billing Code)"
       And I enter the value for "account_billing_country" in text field with id "property(Billing Country)"
 
-    Then I click the button with id "copyAddress"
+    Then I click the button with "id" "copyAddress"
       And sleep for 2 seconds
     Then I click the element with text "Billing to Shipping"
       And I check that the text field with id "property(Shipping Street)" contains the value for "account_billing_street"
@@ -39,19 +39,19 @@ Feature: Bookcamp Example 3 Cucumber and Chrome (Watir-webdriver)
       And I check that the text field with id "property(Shipping Code)" contains the value for "account_billing_zipcode"
       And I check that the text field with id "property(Shipping Country)" contains the value for "account_billing_country"
 
-    Then I click the button with value "Save"
+    Then I click the button with "value" "Save"
       And sleep for 2 seconds
 
     Then I check that the span with id "value_Account Name" contains the account name
       And sleep for 2 seconds
-    Then I click the link with id "tab_Accounts"
+    Then I click the link with "id" "tab_Accounts"
       And sleep for 2 seconds
       And I should see the account name
       And sleep for 2 seconds
 
     Then I click the link with the account name
       And sleep for 2 seconds
-      And I click the button with name "Delete2"
+      And I click the button with "name" "Delete2"
       And I click "OK" in the browser alert
       And sleep for 2 seconds
       And I should not see the account name
