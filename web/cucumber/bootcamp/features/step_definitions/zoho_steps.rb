@@ -23,7 +23,7 @@ And /^I enter "(.*?)" in password$/ do |password|
 end
 
 Then /^I create a unique account name$/ do
-  @account_name = "Acct #{@timestamp}"
+  @account_name = "Acct #{$timestamp}"
 end
 
 And /^I enter the account name in the new account field$/ do
@@ -44,12 +44,12 @@ And /^I should not see the account name$/ do
 end
 
 Then /^I click the link with the account name$/ do
-  step "I click the link with text \"#{@account_name}\""
+  step "I click the link with \"text\" \"#{@account_name}\""
 end
 
 Then /^I sign out$/ do
-  step "I click the div with id \"linkid\""
-  step "I click the button with value \"Sign Out\""
+  step "I click the div with \"id\" \"linkid\""
+  step "I click the button with \"value\" \"Sign Out\""
   #@browser.image(:class, 'sort_desc').click # Doesn't drop list in IE
   #@browser.button(:value, 'Sign Out').click
 end

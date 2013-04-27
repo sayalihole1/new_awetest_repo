@@ -1,9 +1,10 @@
 Feature: Bookcamp Example 3 Cucumber and Classic Watir
 
   Scenario: Sign in, add and delete a new account, and sign out
-    Given I load data spreadsheet "bootcamp_data.xls" for "bootcamp_3_cw"
+    Given I load data spreadsheet "bootcamp_data.xls" for this feature
+      And I run with Watir
     Then I open Internet Explorer
-    Then I go to the URL
+      And I go to the URL
       And sleep for 2 seconds
 
     Then I enter the userid

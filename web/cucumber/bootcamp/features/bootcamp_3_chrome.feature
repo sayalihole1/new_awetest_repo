@@ -1,7 +1,7 @@
 Feature: Bookcamp Example 3 Cucumber and Chrome (Watir-webdriver)
 
   Scenario: Sign in, add and delete a new account, and sign out
-    Given I load data spreadsheet "bootcamp_data.xls" for "bootcamp_3_chrome"
+    Given I load data spreadsheet "bootcamp_data.xls" for this feature
     Then I open Chrome
     Then I go to the URL
       And sleep for 2 seconds

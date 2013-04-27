@@ -3,7 +3,7 @@ Feature: Bookcamp Example 3 Cucumber and Firefox (Watir-webdriver)
   Scenario: Sign in, add and delete a new account, and sign out
     Given I load data spreadsheet "bootcamp_data.xls" for "bootcamp_3_firefox"
     Then I open Firefox
-    Then I go to the URL
+    Then I go to Zoho login URL
       And sleep for 2 seconds
 
     Then I enter the userid

@@ -1,7 +1,7 @@
 Feature: Bookcamp Example 2 Cucumber and Watir-webdriver
 
   Scenario: Sign in, add and delete a new account, and sign out
-    Given I load data spreadsheet "bootcamp_data.xls" for "bootcamp_2_wwd"
+    Given I load data spreadsheet "bootcamp_data.xls" for this feature
     Then I open Firefox
     Then I go to Zoho login URL
       And sleep for 2 seconds
