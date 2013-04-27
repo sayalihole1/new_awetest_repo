@@ -1,7 +1,8 @@
 Feature: Bookcamp Example 1 Cucumber and Classic Watir
 
   Scenario: Sign in, add and delete a new account, and sign out
-    Given I open Internet Explorer
+    Given I run with Watir
+      And I open Internet Explorer
     Then I go to Zoho login URL
       And sleep for 2 seconds
 

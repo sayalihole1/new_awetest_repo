@@ -37,5 +37,7 @@ Feature: Bookcamp Cucumber 0
       And sleep for 2 seconds
       And I should not see "Bootcamp 0"
 
-    Then I sign out
-      And I close the browser
+    Then I click the div with "id" "linkid"
+      And I click the button with "value" "Sign Out"
+      And sleep for 2 seconds
+    Then I close the browser

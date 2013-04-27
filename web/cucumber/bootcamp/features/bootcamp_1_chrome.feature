@@ -31,7 +31,7 @@ Feature: Bookcamp Example 1 Cucumber and Watir-webdriver
 
     Then I click the link with the account name
       And sleep for 4 seconds
-      And I click the "Delete2" button
+      And I click the button with "name" "Delete2"
       And sleep for 2 seconds
       And I click "OK" in the browser alert
       And sleep for 2 seconds
