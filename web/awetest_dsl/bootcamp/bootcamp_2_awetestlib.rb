@@ -1,5 +1,5 @@
 #Bootcamp Example 2 IE, Classic Watir, Awetestlib, Excel data repository
-module Bootcamp2CwAwetestlib
+module Bootcamp2Awetestlib
 
   $watir_script=true
 

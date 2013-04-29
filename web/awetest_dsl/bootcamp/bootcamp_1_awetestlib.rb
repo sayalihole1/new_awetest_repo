@@ -1,5 +1,5 @@
 #Bootcamp Example 2: IE, Classic Watir, Awetestlib
-module Bootcamp1CwAwetestlib
+module Bootcamp1Awetestlib
 
   $watir_script=true
 

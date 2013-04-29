@@ -81,7 +81,7 @@ end
 end
 
 # open the browser
-browser = Watir::IE.new
+browser = Watir::Browser.new
 browser.goto(@login['url'])
 sleep(2)
 

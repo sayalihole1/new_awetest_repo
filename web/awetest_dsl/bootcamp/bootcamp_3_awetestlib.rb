@@ -1,7 +1,7 @@
 #Bootcamp Example 3 IE, Classic Watir, Awetestlib, with project library bootcamp_library.rb
 $watir_script = true
 
-module Bootcamp3CwAwetestlib
+module Bootcamp3Awetestlib
 
   def run_test(browser)
     acct_name = "Acct #{@timestamp}" # DRY: avoid literals

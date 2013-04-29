@@ -7,7 +7,7 @@ require 'pry'
 timestamp = Time.now.strftime("%Y%m%d%H%M%S")
 
 # open the browser
-browser   = Watir::IE.new
+browser   = Watir::Browser.new
 browser.goto("https://accounts.zoho.com/login?serviceurl=https://www.zoho.com/&hide_signup=true&css=https://www.zoho.com/css/login.css")
 sleep(2)
 

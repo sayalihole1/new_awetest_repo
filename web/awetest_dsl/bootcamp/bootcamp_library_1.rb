@@ -41,7 +41,7 @@ module BootcampLibrary1
 
   def open_the_browser_to_url
     if $watir_script
-      browser = Watir::Browser.new
+      browser = Watir::IE.new
     else
       browser = Watir::Browser.new $browser_sym
     end
