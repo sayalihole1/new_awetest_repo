@@ -56,6 +56,7 @@ end
 
 Then /^I check that the span with "?(.+?)"? "(.*?)" contains the account name$/ do |how, what|
   what = Regexp.new(Regexp.escape(what)) unless how =~ /index|text/i or what.is_a?(Regexp)
+  #step "I wait until span with #{how} \"#{what}\" is ready"
   @browser.span(how.to_sym, what).text == @account_name
 end
 
