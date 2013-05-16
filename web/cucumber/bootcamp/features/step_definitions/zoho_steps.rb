@@ -2,10 +2,6 @@ Then /^I go to Zoho login URL$/ do
   @browser.goto("https://accounts.zoho.com/login?serviceurl=https://www.zoho.com/&hide_signup=true&css=https://www.zoho.com/css/login.css")
 end
 
-And /^sleep for "?(\d+?)"? seconds?$/ do |seconds|
-  step "I wait #{seconds} seconds"
-end
-
 Then /^I enter "(.*?)" in login id$/ do |userid|
   step "I enter \"#{userid}\" in text field with id \"lid\""
 end
@@ -59,8 +55,3 @@ Then /^I check that the span with "?(.+?)"? "(.*?)" contains the account name$/ 
   #step "I wait until span with #{how} \"#{what}\" is ready"
   @browser.span(how.to_sym, what).text == @account_name
 end
-
-#Then /^I go to the URL$/ do
-#  @browser.goto(@login['url'])
-#end
-

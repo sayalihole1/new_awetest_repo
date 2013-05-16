@@ -2,4 +2,5 @@ awetest_examples.iws
 .idea/
 ~$*
 *.log
+awetest_reports/
 require.txt

@@ -32,7 +32,7 @@ Feature: Bookcamp Example 2 Cucumber and Classic Watir
       And I enter the value for "account_billing_country" in text field with id "property(Billing Country)"
 
     Then I click the button with "value" "Save"
-      And sleep for 2 seconds
+      And sleep for 5 seconds
 
     Then I check that the span with id "value_Account Name" contains the account name
       And sleep for 2 seconds

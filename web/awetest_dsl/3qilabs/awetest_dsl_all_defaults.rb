@@ -1,7 +1,8 @@
-module TestGmail
+module AwetestDslAllDefaults
 
+  # In Awetestlib requires -e www.google.com and -b (browser abbreviation)
   def run
-    browser=open_browser
+    browser = open_browser
     browser.goto(@myAppEnv.url)
     sleep(2)
     set_textfield_by_name(browser, 'q', '3QILabs')

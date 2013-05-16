@@ -65,7 +65,7 @@ module Bootcamp2Awetestlib
   def delete_verify_account(browser)
     click(browser, :link, :text, @acct_name)
     sleep_for(2)
-    click_button_by_name(browser, "Delete2")
+    click_button_no_wait_by_name(browser, "Delete2")
     sleep_for(2)
     close_modal_ie(browser, title="Message from webpage", button="OK", text='Are you sure ?')
     sleep_for(2)

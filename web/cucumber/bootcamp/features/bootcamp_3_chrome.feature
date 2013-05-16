@@ -13,7 +13,7 @@ Feature: Bookcamp Example 3 Cucumber and Chrome (Watir-webdriver)
     Then I click the link with "id" "tab_Accounts"
 
     Then I create a unique account name
-    Then I click the button with "value" "New Account"
+    Then I click the "New Account" button
       And I enter the account name in the new account field
 
     Then I enter the value for "account_phone" in text field with id "property(Phone)"
@@ -33,7 +33,7 @@ Feature: Bookcamp Example 3 Cucumber and Chrome (Watir-webdriver)
       And I check that the text field with id "property(Shipping Code)" contains the value for "account_billing_zipcode"
       And I check that the text field with id "property(Shipping Country)" contains the value for "account_billing_country"
 
-    Then I click the button with "value" "Save"
+    Then I click the "Save" button
       And sleep for 5 seconds
 
     Then I check that the span with id "value_Account Name" contains the account name

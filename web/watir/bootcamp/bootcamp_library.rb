@@ -58,7 +58,7 @@ module BootcampLibrary
   def delete_account(browser, acct_name)
     click(browser, :link, :text, acct_name)
     sleep_for(2)
-    click(browser, :button, :name, 'Delete2')
+    click_no_wait(browser, :button, :name, 'Delete2')
     close_modal(browser, "Message from webpage")
   end
 

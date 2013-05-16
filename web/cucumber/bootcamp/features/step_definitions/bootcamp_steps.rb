@@ -27,3 +27,9 @@ end
 Given /^I load data spreadsheet "(.+?)" for this feature$/ do |name|
   step "I load data spreadsheet \"#{name}\" for \"#{$feature_name}\""
 end
+
+# NOTE: This step definition is a candidate for predefined steps
+And /^sleep for "?(\d+?)"? seconds?$/ do |seconds|
+  step "I wait #{seconds} seconds"
+end
+

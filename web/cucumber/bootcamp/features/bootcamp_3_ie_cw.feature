@@ -14,7 +14,7 @@ Feature: Bookcamp Example 3 Cucumber and Classic Watir
     Then I click the link with "id" "tab_Accounts"
 
     Then I create a unique account name
-    Then I click the button with "value" "New Account"
+    Then I click the "New Account" button
       And I enter the account name in the new account field
 
     Then I enter the value for "account_phone" in text field with id "property(Phone)"

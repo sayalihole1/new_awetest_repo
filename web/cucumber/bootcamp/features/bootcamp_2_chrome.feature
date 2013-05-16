@@ -3,7 +3,7 @@ Feature: Bookcamp Example 2 Cucumber and Watir-webdriver
   Scenario: Sign in, add and delete a new account, and sign out
     Given I load data spreadsheet "bootcamp_data.xls" for "bootcamp_2_chrome"
     Then I open Chrome
-    Then I go to Zoho login URL
+    Then I go to the URL
       And sleep for 2 seconds
 
     Then I enter the userid
@@ -31,7 +31,7 @@ Feature: Bookcamp Example 2 Cucumber and Watir-webdriver
       And I enter the value for "account_billing_country" in text field with id "property(Billing Country)"
 
     Then I click the "Save" button
-      And sleep for 2 seconds
+      And sleep for 5 seconds
 
     Then I check that the span with id "value_Account Name" contains the account name
       And sleep for 4 seconds
