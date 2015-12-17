@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'watir-webdriver'
+/* require 'watir-webdriver' */
 b = Watir::Browser.new
 b.goto("www.google.com")
 b.text_field(:name, "q").set("3qilabs")
