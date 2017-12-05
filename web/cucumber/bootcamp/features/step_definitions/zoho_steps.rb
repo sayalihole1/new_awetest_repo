@@ -2,6 +2,8 @@ Then /^I go to Zoho login URL$/ do
   @browser.goto("https://accounts.zoho.com/login?serviceurl=https://www.zoho.com/&hide_signup=true&css=https://www.zoho.com/css/login.css")
 end
 
+
+###updated
 Then /^I enter "(.*?)" in login id$/ do |userid|
   step "I enter \"#{userid}\" in text field with id \"lid\""
 end
