@@ -10,3 +10,5 @@ Scenario: TestScenario1
 	Then I click the search button "btnG"
 	Then I should see "3QI Labs launched in late 2009 with the simple goal of helping development teams"
 	Then I close the browser
+
+	----------sample edited------------
