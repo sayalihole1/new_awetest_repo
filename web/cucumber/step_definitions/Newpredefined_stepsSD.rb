@@ -12,7 +12,10 @@ Given /^I connect to the webdriver browser$/ do
 	#browser = Watir::Browser.new(:remote, :url=>'http://localhost:8080/wd/hub/')
 end
 
+
 ##edited
+=======
+--------------------New added---------------------------
 
 
 --------------------------
