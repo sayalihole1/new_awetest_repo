@@ -1,1 +1,1 @@
-File.open("output.html","a+"){|f| f.write "This works!"}
+File.open("output.html","a+"){|f| f.write "This works for edit also!"}
