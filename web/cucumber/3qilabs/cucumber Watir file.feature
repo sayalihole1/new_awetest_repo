@@ -1,5 +1,5 @@
-Feature: Test Cucumber Watir script
-	I want to test cucumber
+Feature: Test Cucumber Watir script test
+	I want to test cucumber 
 
 Scenario: TestScenario1
         Given I run with Watir
