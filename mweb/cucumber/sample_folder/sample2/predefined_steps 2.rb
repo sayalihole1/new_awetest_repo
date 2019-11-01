@@ -27,6 +27,11 @@ def open_firefox
   @browser = Watir::Browser.new :firefox
 end
 
+def open_safari
+  setup_watir_webdriver
+  @browser = Watir::Browser.new(:remote, :desired_capabilities=>:'safari')
+end
+
 def open_chrome
   setup_watir_webdriver
   @browser = Watir::Browser.new :chrome
@@ -57,23 +62,7 @@ def navigate_to_environment_url
 end
 
 def open_a_browser
-  if @params
-     puts "@params: #{@params}"
- 	  case @params["browser"]
-       when "FF"
-         open_firefox
-       when "IE"
-         open_internet_explorer
-       when "C", "GC"
-         open_chrome
- 	  end
- 	else
-     if $watir_script
-       open_internet_explorer
-     else
-       open_firefox
-     end
-   end
+  @driver = $driver.driver
 end
 
 Given /^I run with Watir$/ do
@@ -133,7 +122,7 @@ Then /^I navigate to the environment url$/ do
 end
 
 Then /^I go to the url "(.*?)"$/ do |url|
-  @browser.goto url
+  @driver.navigate.to  url
 end
 
 Then /^I go to the (URL|url)$/ do |dummy|
@@ -180,7 +169,7 @@ And /^I enter the value for "(.*?)" in text field with "?(.*?)"? "(.*?)"$/ do |i
   if index =~ /zipcode/
     value = @var[index].to_i.to_s
   else
-    value = @var[index]
+    value = index
   end
   step "I enter \"#{value}\" in text field with #{how} \"#{what}\""
 end
@@ -304,6 +293,20 @@ And /^I close the browser$/ do
   @browser.close
 end
 
+When(/^I should see "([^"]*)" but proceed if not present$/) do |arg|
+  @text_list[arg]= @browser.link(:text, "#{arg}").exists?
+  File.open(@error_file,"w") do |f|
+    f.write(@text_list.to_json)
+  end
+
+  if @browser.link(:text, "#{arg}").exists?
+    # Do not take a screen shot
+  else
+    step "I take a screenshot"
+  end
+
+end
+
 Given /^I load data spreadsheet "(.*?)" for "(.*?)"$/ do |file, feature|
   require 'roo'
   @workbook               = Excel.new(file)
@@ -384,9 +387,40 @@ Then /^I load @var from spreadsheet$/ do
   end
 end
 
-#Before do
-#  unless awetestlib?
-#    manifest_file = File.join(File.dirname(__FILE__), '..', 'manifest.json')
-#    @params = JSON.parse(File.open(manifest_file).read)['params'] #Have access to all params in manifest file
-#  end
-#end
+And(/^I take a screenshot$/) do
+  take_screenshot
+end
+
+Before do
+  unless awetestlib?
+    manifest_file = File.join(File.dirname(__FILE__), '..', 'manifest.json')
+    @params = JSON.parse(File.open(manifest_file).read)['params'] #Have access to all params in manifest file
+  end
+  @text_list = Hash.new()
+  @error_file = File.join(File.dirname(__FILE__), '..', '..', 'error.txt')
+
+  if $step_no.to_i < 3
+    $step_no = 2
+  else
+    $step_no = $step_no + 2
+  end
+end
+
+AfterStep() do
+  $step_no = $step_no + 1
+end
+
+After do |scenario|
+  if scenario.failed?
+    take_screenshot
+  else
+    $step_no = $step_no - 1
+  end
+end
+
+def take_screenshot
+  abc = File.expand_path("../..",File.dirname(__FILE__))
+  file_na = abc.split("/").last
+  file_path = File.join(File.dirname(__FILE__), '..', '..', "#{file_na.to_s}_#{$step_no}.jpg")
+  @driver.save_screenshot(file_path)
+end
