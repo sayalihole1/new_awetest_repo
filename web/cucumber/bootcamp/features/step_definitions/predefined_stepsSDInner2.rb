@@ -23,3 +23,4 @@ end
 Then(/^I click the link with text "(.*?)"$/) do |text|
   @browser.link(:text, "#{text}").click
 end
+#####################################################
