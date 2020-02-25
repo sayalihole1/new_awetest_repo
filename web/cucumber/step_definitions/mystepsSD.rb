@@ -13,7 +13,7 @@
 #end
 
 #########################################
-
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<#
 Then(/^I enter text "(.*?)" in the search box$/) do |arg1|
   @browser.text_field(:id,'gbqfq').set("#{arg1}")
 end
