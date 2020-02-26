@@ -3,7 +3,7 @@ def awetestlib?
 rescue
   return false
 end
-###########
+
 def setup_classic_watir
     require 'watir'
     require 'win32ole'
