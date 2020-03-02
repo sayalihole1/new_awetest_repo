@@ -7,3 +7,7 @@ sleep 5
 b.button(:name, "btnG").click
 b.text.include? "3QI Labs"
 b.close
+
+
+xyz
+xyz
