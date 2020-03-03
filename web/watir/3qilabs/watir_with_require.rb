@@ -1,7 +1,12 @@
 require 'rubygems'
+puts sprintf('%.4f', (Time.now - begin_time))
+begin_time = Time.now
 require 'watir'
+puts sprintf('%.4f', (Time.now - begin_time))
+begin_time = Time.now
 
 b = Watir::Browser.new
+puts sprintf('%.4f', (Time.now - begin_time))
 b.goto("www.google.com")
 b.text_field(:name, "q").set("3qilabs")
 sleep 5

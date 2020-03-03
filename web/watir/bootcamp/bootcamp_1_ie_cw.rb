@@ -1,4 +1,3 @@
-#Bootcamp Example 1 IE, Classic Watir
 require 'watir'
 require 'win32ole'
 @ai = ::WIN32OLE.new('AutoItX3.Control')
