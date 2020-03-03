@@ -40,3 +40,7 @@ Feature: Bootcamp Cucumber 0
       And I click the button with "value" "Sign Out"
       And I wait 2 seconds
     Then I close the browser
+
+	
+	
+	xyz xyz
