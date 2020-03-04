@@ -1,0 +1,61 @@
+xyz
+xyz{"common_assets":{
+  "test_assets" : ["web/cucumber/bootcamp/features/step_definitions/*"]
+  },
+	"web": {
+        "ignore_scripts": ["web/awetest_scripts/TrialFolder/sample_Folder/google_search_awe10.rb"],
+	"test_assets": ["web/cucumber/step_definitions/*","service/cucumber123/*","web/cucumber/bootcamp/bootcamp_root.feature"]
+	},
+	"mWeb": {
+		"ignore_scripts": ["cucumber_new.feature", "cucumber_sample.feature"],
+		"ignore_assets": ["steps_cucu.rb"]
+	},
+	"mApp": {
+		"ignore_scripts": ["cucumber_new.feature", "cucumber_sample.feature"],
+		"ignore_assets": ["steps_cucu.rb"]
+	},
+	"service": {
+      "ignore_scripts": ["service/watir/zoho_steps.rb"],
+      "ignore_assets": ["service/cucumber123/bootcamp/step_definitions/bootcamp_steps.rb"]
+	}
+}
+{"common_assets":{
+  "test_assets" : ["web/cucumber/bootcamp/features/step_definitions/*"]
+  },
+	"web": {
+        "ignore_scripts": ["web/awetest_scripts/TrialFolder/sample_Folder/google_search_awe10.rb"],
+	"test_assets": ["web/cucumber/step_definitions/*","service/cucumber123/*","web/cucumber/bootcamp/bootcamp_root.feature"]
+	},
+	"mWeb": {
+		"ignore_scripts": ["cucumber_new.feature", "cucumber_sample.feature"],
+		"ignore_assets": ["steps_cucu.rb"]
+	},
+	"mApp": {
+		"ignore_scripts": ["cucumber_new.feature", "cucumber_sample.feature"],
+		"ignore_assets": ["steps_cucu.rb"]
+	},
+	"service": {
+      "ignore_scripts": ["service/watir/zoho_steps.rb"],
+      "ignore_assets": ["service/cucumber123/bootcamp/step_definitions/bootcamp_steps.rb"]
+	}
+}
+{"common_assets":{
+  "test_assets" : ["web/cucumber/bootcamp/features/step_definitions/*"]
+  },
+	"web": {
+        "ignore_scripts": ["web/awetest_scripts/TrialFolder/sample_Folder/google_search_awe10.rb"],
+	"test_assets": ["web/cucumber/step_definitions/*","service/cucumber123/*","web/cucumber/bootcamp/bootcamp_root.feature"]
+	},
+	"mWeb": {
+		"ignore_scripts": ["cucumber_new.feature", "cucumber_sample.feature"],
+		"ignore_assets": ["steps_cucu.rb"]
+	},
+	"mApp": {
+		"ignore_scripts": ["cucumber_new.feature", "cucumber_sample.feature"],
+		"ignore_assets": ["steps_cucu.rb"]
+	},
+	"service": {
+      "ignore_scripts": ["service/watir/zoho_steps.rb"],
+      "ignore_assets": ["service/cucumber123/bootcamp/step_definitions/bootcamp_steps.rb"]
+	}
+}
