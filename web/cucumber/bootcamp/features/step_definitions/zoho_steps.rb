@@ -55,3 +55,6 @@ Then /^I check that the span with "?(.+?)"? "(.*?)" contains the account name$/ 
   #step "I wait until span with #{how} \"#{what}\" is ready"
   @browser.span(how.to_sym, what).text == @account_name
 end
+
+
+######################################################################################
