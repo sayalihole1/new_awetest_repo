@@ -8,5 +8,5 @@ Scenario: TestScenario1
 	Then I go to the url "http://google.com"
 	Then I fill in with value "3qilabs"
 	Then I click the search button "btnG"
-	Then I should see "3QI Labs launched in late 2009 with the simple goal of helping development teams"
+	Then I should see "3QI Labs launched in late 2010 with the simple goal of helping development teams"
 	Then I close the browser

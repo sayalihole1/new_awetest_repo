@@ -3,6 +3,7 @@ Then /^I go to Zoho login URL$/ do
 end
 
 Then /^I enter "(.*?)" in login id$/ do |userid|
+puts "---this is a test"
   step "I enter \"#{userid}\" in text field with id \"lid\""
 end
 

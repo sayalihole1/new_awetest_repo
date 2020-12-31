@@ -1,4 +1,5 @@
 def awetestlib?
+  puts "this is a awetestlib file"
   not Awetestlib::Runner.nil?
 rescue
   return false
