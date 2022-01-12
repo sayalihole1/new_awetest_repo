@@ -5,10 +5,10 @@ Feature: Bookcamp Example 1 Cucumber and Watir-webdriver
     Then I go to Zoho login URL
       And sleep for 2 seconds
 
-    Then I enter "joeklienwatir@gmail.com" in login id
-      And I enter "watir001" in password
-      And I click the "Sign In" button
-      And sleep for 2 seconds
+#    Then I enter "joeklienwatir@gmail.com" in login id
+#      And I enter "watir001" in password
+#      And I click the "Sign In" button
+#      And sleep for 2 seconds
 
     Then I click the link with "title" "CRM Software"
       And sleep for 4 seconds
