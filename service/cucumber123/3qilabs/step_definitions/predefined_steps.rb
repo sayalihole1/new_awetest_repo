@@ -1,6 +1,6 @@
-# Then /^I fill in with value "(.*?)"$/ do |value|
-#   @browser.text_field(:name, "q").set value
-# end
+Then /^I fill in with value "(.*?)"$/ do |value|
+  @browser.text_field(:name, "q").set value
+end
 Then /^I click the search button "(.*?)"$/ do |element_text|
 	sleep 1
   @browser.button(:name, element_text).click
