@@ -1,3 +1,4 @@
+# This is now edited
 Feature: Bookcamp Example 1 Cucumber and Watir-webdriver
 
   Scenario: Sign in, add and delete a new account, and sign out
